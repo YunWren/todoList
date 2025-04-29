@@ -50,7 +50,10 @@ jobs:
       # 5. 执行打包
       - name: Build project
         run: npm run build
-
+        
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+      
       # 6. 上传打包产物为 artifact（可选，方便后续部署或下载）
       - name: Upload build artifact
         uses: actions/upload-artifact@v3
