@@ -80,21 +80,11 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-  .todo {
-      width: 90%;
-      min-width: 600px;
-      box-sizing: border-box;  /* 确保内边距和边框都在 90% 宽度内 */
-      margin: 40px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
 }
 
 .todo {
   width: 90%;
-  max-width: 800px;
+  max-width: 500px;
   margin: 40px auto;
   padding: 20px;
   background: #fff;
