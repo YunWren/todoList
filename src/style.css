@@ -77,3 +77,204 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.todo {
+  width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.todo-x {
+  height: 12px;
+  width: 12px;
+}
+.todo-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+.todo-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.todo-input::placeholder {
+  color: rgba(133, 128, 128, 0.87);
+  font-size: 16px;
+  /* font-style: italic; */
+}
+
+.add-btn {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #be7f71;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.add-btn:hover {
+  background-color: #805141;
+}
+.todo-list {
+  list-style: none;
+  padding: 0 10px;
+  margin: 0;
+}
+.todo-item {
+  margin-left: -42px;
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.todo-check {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* 重点加：防止浮动错位！ */
+.todo-item > .todo-check {
+  flex-shrink: 0;
+}
+input.finished {
+  background-color: #f3e9e9;
+  border-color: #ddcece;
+  background-image: none;
+}
+.finished {
+  text-decoration: line-through;
+  color: #af9c9c;
+}
+.todo-del {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+.todo-foot {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-Date {
+  font-size: 12px;
+  color: #918989;
+}
+
+.todo-len {
+  font-size: 12px;
+  color: #918989;
+}
+.todo-ops {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.ops-btn {
+  margin-left: 10px;
+  padding: 6px 12px;
+  color: #9d8080;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  transition: background-color 0.3s;
+}
+
+.ops-btn:hover {
+  color: #625050;
+}
+/* 进入和离开动画 */
+.list-enter-active, .list-leave-active {
+  transition: all 0.5s ease;
+}
+
+/* 新元素进入前的状态 */
+.list-enter-from {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* 新元素进入后的状态 */
+.list-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 被移除前的状态 */
+.list-leave-from {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 被移除后的状态 */
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.list-move {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.upload-container {
+  position: fixed; /* 固定位置 */
+  top: 10px;
+  left: 10px;
+  z-index: 9999; /* 保证在最上层 */
+  opacity: 0.5; /* 半透明 */
+}
+.upload-span{
+  color: #805141;
+  font-size: 12px;
+  margin: 10px;
+  cursor: pointer;
+}
+.transparent {
+  background: rgba(255, 255, 255, 0.2); /* 半透明白色背景 */
+  backdrop-filter: blur(8px); /* 加一点模糊会更高级感，可选 */
+}
+
+.transparent span{
+  color: #ccc;
+}
+
+.transparent span.finished{
+  color: #897b7b;
+}
+
+.transparent input{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.transparent .todo-check.finished {
+  background-color: rgba(89, 62, 62, 0.7);
+  border-color: rgba(90, 83, 83, 0.7);
+}
+
+
