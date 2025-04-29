@@ -84,7 +84,8 @@ button:focus-visible {
 
 .todo {
   width: 90%;
-  max-width: 500px;
+  max-width: 1000px;
+  min-width: 600px;
   margin: 40px auto;
   padding: 20px;
   background: #fff;
@@ -326,6 +327,8 @@ input.finished {
 
   .todo {
     width: 90%;
+    min-width: auto;
+    max-width: 750px;
     padding: 15px;
   }
 
